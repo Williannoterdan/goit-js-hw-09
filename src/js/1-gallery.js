@@ -82,12 +82,7 @@ gallery.insertAdjacentHTML(
     )
     .join('')
 );
-var lightbox1 = $('.lighbox-1 a').simpleLightbox();
-
-gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-  // do something…
-});
-new SimpleLightbox('.some-element a', {
+import SimpleLightbox from 'simplelightbox';
+var lightbox = new SimpleLightbox('.gallery a', {
   /* options */
 });
