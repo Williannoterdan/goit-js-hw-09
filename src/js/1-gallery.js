@@ -69,7 +69,7 @@ gallery.insertAdjacentHTML(
   'afterbegin',
   images
     .map(
-      (x) =>
+      x =>
         `<li class="gallery-item" onclick="return false">
                     <a class="gallery-link" href="${x.original}" > 
                     <img
