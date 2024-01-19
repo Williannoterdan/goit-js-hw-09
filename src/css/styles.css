@@ -5,9 +5,8 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
-@import "simplelightbox/dist/simple-lightbox.min.css";
+@import url("simplelightbox/dist/simple-lightbox.min.css");
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -24,3 +23,120 @@
   -webkit-text-size-adjust: 100%;
 }
 
+:root {
+  --color-buton-negativ: #FF4E4E;
+  --color-buton-negativ-hover: #FF7070;
+  --color-buton-txt: #FFF;
+  --color-buton-positiv: #4E75FF;
+  --color-buton-positiv-hover: #6C8CFF;
+  --color-background-one: #F6F6FE;
+  --color-background-two: #808080;
+  --color-txt-one: #2E2F42;
+  --border-color-active-one: #808080;
+}
+textarea {
+  resize: none;
+}
+.gallery {
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.gallery-item {
+  display: contents;
+}
+
+.gallery-link {
+  text-decoration: none;
+}
+
+
+.gallery-image {
+  width: calc((100% - 48px) / 3);
+  display: inline;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  transition-duration: 0.4s;
+}
+
+.gallery-image:hover {
+  cursor: url(/bxs_hand-down.svg), pointer;
+  border: 2px solid var(--color-txt-one);
+}
+
+.task2-div {
+
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 1);
+}
+.return-booton{
+  background-color: var(--color-buton-negativ);
+  border-radius: 5px;
+  padding: 4px 16px;
+  color: var(--color-buton-txt);
+
+}
+.feedback-form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-label{
+  display: flex;
+  width: 360px;
+  flex-direction: column;
+  border-color: var(--border-color-active-one);
+}
+.activ-stail{
+  border-radius: 4px;
+    border: var(--border-color-active-one) solid 1px;
+}
+.activ-stail:hover{
+  border-color: var(--color-txt-one);
+  border-radius: 4px;
+  outline: 1px;
+}
+
+
+.activ-stail:active,
+.activ-stail:focus-visible{
+  border-color: var(--border-color-active-one);
+  border-radius: 4px;
+  outline: 0px ;
+
+}
+.positiv-button{
+  background-color: var(--color-buton-positiv);
+  width: 95px;
+  padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius:  8px ;
+    color: var(--color-background-one);
+    border-color: transparent;
+}
+.positiv-button:hover{
+  background-color: var(--color-buton-positiv-hover);
+}
+.tasc-clik{
+transform: matrix();
+}
+.tasc-clik:hover{
+  border: var(--color-buton-positiv);
+}
+.sl-overlay{
+background-color: var(--color-txt-one);
+}
