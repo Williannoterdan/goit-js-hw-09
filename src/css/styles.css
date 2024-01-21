@@ -34,6 +34,9 @@
   --color-txt-one: #2E2F42;
   --border-color-active-one: #808080;
 }
+.nav-list{
+  justify-content: start;
+}
 textarea {
   resize: none;
 }
