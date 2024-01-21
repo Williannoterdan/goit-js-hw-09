@@ -69,7 +69,7 @@ textarea {
 }
 
 .gallery-image:hover {
-  cursor: url(/bxs_hand-down.svg), pointer;
+
   border: 2px solid var(--color-txt-one);
 }
 
