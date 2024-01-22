@@ -1,4 +1,4 @@
-import SimpleLightbox from 'simplelightbox';
+
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -71,13 +71,13 @@ const images = [
 const gallery = document.querySelector('.gallery');
 let imageHtml = images
   .map(
-    x =>
+    image =>
       `<li class="gallery-item" onclick="return false">
-                    <a class="gallery-link" href="${x.original}" > 
+                    <a class="gallery-link" href="${image.original}" > 
                     <img
                         class="gallery-image"
-                        src="${x.preview}" 
-                        alt="${x.description}" 
+                        src="${image.preview}" 
+                        alt="${image.description}" 
                     />
                      </a>
                 </li>`
