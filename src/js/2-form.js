@@ -11,7 +11,7 @@ form.elements.email.addEventListener('input', evt => {
   localStorage.setItem(localStorageKeyEmail, evt.target.value);
 });
 form.elements.message.addEventListener('input', evt => {
-  localStorage.setItem(localStorageKeysMessage{object}, evt.target.value);
+  localStorage.setItem(localStorageKeysMessage, evt.target.value);
 });
 form.addEventListener('submit', event => {
   event.preventDefault();
