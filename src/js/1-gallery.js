@@ -1,4 +1,3 @@
-
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -85,6 +84,7 @@ let imageHtml = images
   .join('');
 gallery.insertAdjacentHTML('afterbegin', imageHtml);
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
+const lightbox = new SimpleLightbox('.gallery a', {});
+lightbox.on('show.simplelightbox', function () {
+  console.log('ddd');
 });
