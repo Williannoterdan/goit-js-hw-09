@@ -84,7 +84,12 @@ let imageHtml = images
   .join('');
 gallery.insertAdjacentHTML('afterbegin', imageHtml);
 
-const lightbox = new SimpleLightbox('.gallery a', {});
+const lightbox = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionType: 'text',
+
+  close: false,
+});
 lightbox.on('show.simplelightbox', function () {
   console.log('ddd');
 });
