@@ -76,7 +76,7 @@ let imageHtml = images
                     <img
                         class="gallery-image"
                         src="${image.preview}" 
-                        alt="${image.description}" 
+                        alt="${image.description}"  
                     />
                      </a>
                 </li>`
@@ -86,9 +86,9 @@ gallery.insertAdjacentHTML('afterbegin', imageHtml);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
-  captionType: 'text',
-
-  close: false,
+  captionSelector: 'img',
+  captionsData: 'alt',
+  captionDelay: 250,
 });
 lightbox.on('show.simplelightbox', function () {
   console.log('ddd');

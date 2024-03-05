@@ -2,16 +2,21 @@ let baseUser = { email: '', password: '' };
 console.log('dfd');
 
 const form = document.querySelector('.feedback-form');
-const localStorageKeyEmail = '"feedback-form-state"';
-const localStorageKeysMessage = '"feedback-form-state"';
-form.elements.email.value = localStorage.getItem(localStorageKeyEmail) ?? '';
-form.elements.message.value =localStorage.getItem(localStorageKeysMessage) ?? '';
+const localStorageKey = 'feedback-form-state';
+let a = localStorage.getItem(localStorageKey);
+a = a.p("");
+console.log(a);
+form.elements.email.value = localStorage.getItem(localStorageKey) ?? '';
+form.elements.message.value = localStorage.getItem(localStorageKey) ?? '';
+console.log(localStorage);
 
 form.elements.email.addEventListener('input', evt => {
-  localStorage.setItem(localStorageKeyEmail, evt.target.value);
+  baseUser.email = evt.target.value;
+  localStorage.setItem(localStorageKey, JSON.stringify(baseUser));
 });
 form.elements.message.addEventListener('input', evt => {
-  localStorage.setItem(localStorageKeysMessage, evt.target.value);
+  baseUser.password = evt.target.value;
+  localStorage.setItem(localStorageKey, JSON.stringify(baseUser));
 });
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -22,7 +27,7 @@ form.addEventListener('submit', event => {
     password: passwordos,
   };
   console.log(baseUser);
-  localStorage.removeItem(localStorageKeyEmail);
-  localStorage.removeItem(localStorageKeysMessage);
+  localStorage.removeItem(localStorageKey);
+  localStorage.removeItem(localStorageKey);
   form.reset();
 });
