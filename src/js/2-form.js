@@ -1,13 +1,10 @@
 let baseUser = { email: '', password: '' };
-console.log('dfd');
 
 const form = document.querySelector('.feedback-form');
 const localStorageKey = 'feedback-form-state';
-let a = localStorage.getItem(localStorageKey);
-a = a.p("");
-console.log(a);
-form.elements.email.value = localStorage.getItem(localStorageKey) ?? '';
-form.elements.message.value = localStorage.getItem(localStorageKey) ?? '';
+baseUser = JSON.parse(localStorage.getItem(localStorageKey));
+form.elements.email.value = baseUser.email;
+form.elements.message.value = baseUser.password;
 console.log(localStorage);
 
 form.elements.email.addEventListener('input', evt => {
@@ -20,14 +17,7 @@ form.elements.message.addEventListener('input', evt => {
 });
 form.addEventListener('submit', event => {
   event.preventDefault();
-  let emailos = event.target.email.value;
-  let passwordos = event.target.message.value;
-  baseUser = {
-    email: emailos,
-    password: passwordos,
-  };
   console.log(baseUser);
-  localStorage.removeItem(localStorageKey);
   localStorage.removeItem(localStorageKey);
   form.reset();
 });
