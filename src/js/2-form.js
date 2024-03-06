@@ -1,8 +1,13 @@
 let baseUser = { email: '', password: '' };
 
 const form = document.querySelector('.feedback-form');
+console.log(localStorage);
 const localStorageKey = 'feedback-form-state';
-baseUser = JSON.parse(localStorage.getItem(localStorageKey));
+
+
+if (localStorage.length > 0) {
+  baseUser = JSON.parse(localStorage.getItem(localStorageKey));
+}
 form.elements.email.value = baseUser.email;
 form.elements.message.value = baseUser.password;
 console.log(localStorage);
@@ -20,4 +25,5 @@ form.addEventListener('submit', event => {
   console.log(baseUser);
   localStorage.removeItem(localStorageKey);
   form.reset();
+
 });
